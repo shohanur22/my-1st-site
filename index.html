@@ -6,9 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practise</title>
   <style>
-    ul li:nth-child(2n){
+    ul li:nth-child(2n){    /* 2n=jor , 2n+1= bijor */
       background-color: aqua;
     }
+
+    /*css counter*/
+    body {
+  counter-reset: section;                      /* Set a counter named 'section', and its initial value is 0. */
+}
+
+li::before {
+  counter-increment: section;                  /* Increment the value of section counter by 1 */
+  content: "Section " counter(section) ": ";   /* Display the word 'Section ', the value of
+                                                  section counter, and a colon before the content
+                                                of each h3 */
+}
+
   </style>
 </head>
 <body>
